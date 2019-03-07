@@ -18,7 +18,7 @@ public class PrimesNumber {
     int count = 1;
     int countPrime = 0;
     while (countPrime < 1000) {
-      count++;
+      count = count +2;
       if (isPrimes(count)) {
         System.out.println(count);
         countPrime++;
