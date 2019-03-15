@@ -1,6 +1,6 @@
 package com.step.assignments;
 
-public class NumberToWords extends NumberInWord{
+public class NumberToWords extends NumberInWord {
   public static void main(String[] args) {
     System.out.println(reverse(-1234));
     System.out.println(reverse(100));
@@ -37,8 +37,8 @@ public class NumberToWords extends NumberInWord{
     return digitCount;
   }
 
-  public static void numberToWords(int number){
-    if(number<0){
+  public static void numberToWords(int number) {
+    if (number < 0) {
       System.out.println("Invalid Value");
       return;
     }
@@ -46,16 +46,16 @@ public class NumberToWords extends NumberInWord{
     int digitCount = getDigitCount(number);
     int reverseNumber = reverse(number);
     int reverseNumberDigitCount = getDigitCount(reverseNumber);
-    String reverseNumberWithZero= "";
-      while(reverseNumber>0){
-        int lastDigit = reverseNumber%10;
-        reverseNumber = reverseNumber/10;
-        printNumberInWord(lastDigit);
+    String reverseNumberWithZero = "";
+    while (reverseNumber > 0) {
+      int lastDigit = reverseNumber % 10;
+      reverseNumber = reverseNumber / 10;
+      printNumberInWord(lastDigit);
 
     }
-    int diffrence = digitCount - reverseNumberDigitCount;
-    for (int i = 0; i < diffrence; i++) {
-      reverseNumberWithZero = reverseNumberWithZero+ "0";
+    int difference = digitCount - reverseNumberDigitCount;
+    for (int i = 0; i < difference; i++) {
+      reverseNumberWithZero = reverseNumberWithZero + "0";
       System.out.println("Zero");
     }
 
